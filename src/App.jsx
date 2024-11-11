@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import Event from './pages/Event';
+import Event from './pages/Events';
 import Members from './pages/Members';
 import Alumnus from './pages/Alumni';
 import Gallery from './pages/Gallery';
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/event" element={<Event />} />
+          <Route path="/events" element={<Event />} />
           <Route path="/members" element={<Members />} />
           <Route path="/alumni" element={<Alumnus />} />
           <Route path="/gallery" element={<Gallery />} />
