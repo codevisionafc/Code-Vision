@@ -7,19 +7,19 @@ export default function ContactUs() {
     {
       icon: FaEnvelope,
       title: 'Email',
-      content: 'contact@codevision.com',
-      link: 'mailto:contact@codevision.com',
+      content: 'codevisionafc@gmail.com',
+      link: 'mailto:codevisionafc@gmail.com',
     },
     {
       icon: FaPhone,
       title: 'Phone',
-      content: '+1 234 567 890',
-      link: 'tel:+1234567890',
+      content: '+91 9382731364',
+      link: 'tel:+919382731364',
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Address',
-      content: 'University Campus, Tech Building',
+      content: '1st floor, Dept. of CSE, Computer Science and Engineering Block, Bengal College of Engineering and Technology, Durgapur, West Bengal - 713212',
       link: '#',
     },
   ];

@@ -23,9 +23,9 @@ export default function Navbar() {
   const navLinks = [
     'Home',
     'About Us',
-    'Event',
+    'Events',
     'Members',
-    'Alumnus',
+    'Alumni',
     'Gallery',
     'Contact Us',
   ];
