@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 // import logo from '../assets/logo.svg';
 import logo from '../assets/logo.png';
+import longLogo from '../assets/logo code vision.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,17 +46,22 @@ export default function Navbar() {
               <img
                 src={logo}
                 alt="CODE VISION Logo"
-                className="h-12 w-auto rounded-lg"
+                className="h-10 sm:h-12 w-auto rounded-lg"
               />
             </Link>
-            <div className="ml-3">
+            <img
+              src={longLogo}
+              alt="CODE VISION Logo"
+              className="h-8 sm:h-10 w-auto px-1.5"
+            />
+            {/* <div className="ml-3">
               <h1 className="text-lg sm:text-xl font-bold whitespace-nowrap">
                 CODE VISION
               </h1>
               <p className="text-xs sm:text-sm opacity-80 whitespace-nowrap">
                 An adobe for coders
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Desktop and Tablet Navigation */}

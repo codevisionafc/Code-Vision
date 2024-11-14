@@ -8,6 +8,7 @@ import Alumni from './pages/Alumni';
 import Gallery from './pages/Gallery';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
+import './assets/customScrollbar.css';
 
 function App() {
   return (

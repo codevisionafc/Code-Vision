@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader';
 import { motion } from 'framer-motion';
 
 export default function Members() {
+  document.title = 'CODE VISION | Members';
   const members = {
     governors: [
       { name: 'Aditya Kumar ', branch: 'CSE' },
@@ -61,20 +62,18 @@ export default function Members() {
       { name: 'Sayan Mukherjee ', branch: 'CSE' },
       { name: 'Smriti', branch: 'IT' },
     ],
-    coordinators: [
-
-    ],
+    coordinators: [],
   };
 
   const MemberTable = ({ title, members }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="card mb-8"
+      className="card mb-4 max-w-[600px] mx-auto"
     >
-      <h2 className="text-2xl font-bold mb-6">{title}</h2>
-      <div className="overflow-x-auto">
-        <table className="w-full">
+      <h2 className="text-2xl font-bold mb-2 ">{title}</h2>
+      <div className="overflow-x-auto max-h-[300px] overflow-y-auto custom-scrollbar">
+        <table className=" w-full ">
           <thead>
             <tr className="border-b border-white/10">
               <th className="text-left py-2">Name</th>
@@ -97,8 +96,7 @@ export default function Members() {
   return (
     <div className="pt-20">
       <PageHeader title="Members" subtitle="Meet our team" />
-
-      <div className="section-container">
+      <div className="container mx-auto px-2 mt-10">
         <MemberTable title="Governors (4th Year)" members={members.governors} />
         <MemberTable
           title="Organizers (3rd Year)"
