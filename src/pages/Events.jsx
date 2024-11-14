@@ -1,12 +1,15 @@
-import { details } from 'framer-motion/client';
 import PageHeader from '../components/PageHeader';
 import { motion } from 'framer-motion';
+import { useContext, useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom';
+import { globalContext } from '../context/globalContext';
 
 export default function Events() {
   document.title = 'CODE VISION | Events';
   const events = [
     {
       name: 'C Workshop',
+      ref: 'cWorkshop',
       details: {
         targetAudience: 'First-year students',
         objective: 'Introduce programming basics through hands-on coding in C.',
@@ -30,6 +33,7 @@ export default function Events() {
     },
     {
       name: 'CodeJam',
+      ref: 'codeJam',
       details: {
         overview:
           'A hackathon with the theme “Tech for Good,” encouraging teams to create impactful solutions to real-world problems.',
@@ -51,6 +55,7 @@ export default function Events() {
     },
     {
       name: 'Recruitment',
+      ref: 'recruitment',
       details: {
         eligibility: '2nd-year students only.',
         overview: 'Process to join CODE VISION as a coordinator.',
@@ -80,6 +85,7 @@ export default function Events() {
     },
     {
       name: 'Console',
+      ref: 'console',
       details: {
         objective:
           'Console offers a rich experience, blending competition with learning and community-building across multiple skill domains.',
@@ -114,6 +120,28 @@ export default function Events() {
     },
   ];
 
+  const cWorkshop = useRef(null);
+  const codeJam = useRef(null);
+  const recruitment = useRef(null);
+  const console = useRef(null);
+
+  const refStore = {
+    cWorkshop,
+    codeJam,
+    recruitment,
+    console,
+  };
+
+  const gContext = useContext(globalContext);
+  const { scrollToSection } = gContext;
+
+  const { event } = useParams();
+  useEffect(() => {
+    if (event && refStore[event]) {
+      scrollToSection(refStore[event]);
+    }
+  }, [event]);
+
   return (
     <div className="pt-20">
       <PageHeader
@@ -122,12 +150,15 @@ export default function Events() {
       />
 
       <div className="container mx-auto px-2 mt-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           {events.map((event, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="aspect-square bg-white/10 rounded-lg flex items-center justify-center text-xl font-bold"
+              className="p-4 bg-white/10 rounded-lg flex items-center justify-center text-xl font-bold cursor-pointer"
+              onClick={() => {
+                scrollToSection(refStore[event.ref]);
+              }}
             >
               {event.name}
             </motion.div>
@@ -140,6 +171,7 @@ export default function Events() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="card mb-6"
+            ref={refStore.cWorkshop}
           >
             <h2 className="text-2xl font-bold mb-6">{events[0].name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -195,6 +227,7 @@ export default function Events() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="card mb-6"
+            ref={refStore.codeJam}
           >
             <h2 className="text-2xl font-bold mb-6">{events[1].name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -254,6 +287,7 @@ export default function Events() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="card mb-6"
+            ref={refStore.recruitment}
           >
             <h2 className="text-2xl font-bold mb-6">{events[2].name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -330,6 +364,7 @@ export default function Events() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="card mb-6"
+            ref={refStore.console}
           >
             <h2 className="text-2xl font-bold mb-6">{events[3].name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

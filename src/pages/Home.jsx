@@ -74,24 +74,28 @@ export default function Home() {
 
   const events = [
     {
-      title: 'C-Workshop',
+      title: 'C Workshop',
+      ref: 'cWorkshop',
       description:
         'Introduce basic programming concepts, provide hands-on C coding, encourage questions, and foster community through interactive peer support.',
     },
     {
-      title: 'Console',
-      description:
-        'A 2-day event celebrating diverse skills with competitions in logic, coding, design, creativity, and more for undergraduates, featuring trophies, badges, and certificates.',
-    },
-    {
       title: 'CodeJam',
+      ref: 'codeJam',
       description:
         'A dynamic "Tech for Good" hackathon for students, blending coding, reasoning, and teamwork, with prizes for innovation, impact, and presentation.',
     },
     {
       title: 'Recruitment',
+      ref: 'recruitment',
       description:
         'A two-round process for 2nd-year students, assessing coding, teamwork, communication, and passion through technical challenges and interviews.',
+    },
+    {
+      title: 'Console',
+      ref: 'console',
+      description:
+        'A 2-day event celebrating diverse skills with competitions in logic, coding, design, creativity, and more for undergraduates, featuring trophies, badges, and certificates.',
     },
   ];
 
@@ -197,7 +201,7 @@ export default function Home() {
               <motion.div
                 key={index}
                 className="card cursor-pointer"
-                onClick={() => navigate('/events')}
+                onClick={() => navigate(`/events/${event.ref}`)}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
@@ -205,7 +209,7 @@ export default function Home() {
                 <p className="text-sm opacity-80 mb-4">{event.description}</p>
                 <button
                   className="text-sm underline"
-                  onClick={() => navigate('/events')}
+                  onClick={() => navigate(`/events/${event.ref}`)}
                 >
                   Read more
                 </button>
