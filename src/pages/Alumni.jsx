@@ -161,9 +161,11 @@ export default function Alumni() {
       <PageHeader title="Alumni" subtitle="Our distinguished former members" />
 
       <div className="container mx-auto px-2 mt-10">
-        {Object.entries(alumni).map(([year, names]) => (
-          <AlumniSection key={year} year={year} names={names} />
-        ))}
+        {Object.entries(alumni)
+          .reverse()
+          .map(([year, names]) => (
+            <AlumniSection key={year} year={year} names={names} />
+          ))}
       </div>
     </div>
   );

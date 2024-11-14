@@ -220,7 +220,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-6">
               What you will learn here?
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {skills.map((skill, index) => (
                 <div
                   key={index}
