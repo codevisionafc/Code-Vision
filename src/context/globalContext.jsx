@@ -24,8 +24,13 @@ const GlobalProvider = ({ children }) => {
     };
   }, []);
 
+  // Scroll to a section
+  const scrollToSection = sectionRef => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <globalContext.Provider value={{ isMobile }}>
+    <globalContext.Provider value={{ isMobile, scrollToSection }}>
       {children}
     </globalContext.Provider>
   );

@@ -2,10 +2,26 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   const socialLinks = [
-    { icon: FaGithub, href: '#', label: 'GitHub' },
-    { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
-    { icon: FaInstagram, href: '#', label: 'Instagram' },
-    { icon: FaEnvelope, href: 'mailto:contact@codevision.com', label: 'Email' },
+    {
+      icon: FaGithub,
+      href: 'https://github.com/codevisionafc',
+      label: 'GitHub',
+    },
+    {
+      icon: FaLinkedin,
+      href: 'https://linkedin.com/company/codevision-bcet',
+      label: 'LinkedIn',
+    },
+    {
+      icon: FaInstagram,
+      href: 'https://www.instagram.com/codevisionbcet/',
+      label: 'Instagram',
+    },
+    {
+      icon: FaEnvelope,
+      href: 'mailto:codevisionafc@gmail.com',
+      label: 'Email',
+    },
   ];
 
   return (
@@ -21,6 +37,7 @@ export default function Footer() {
               <a
                 key={index}
                 href={link.href}
+                target="_blank"
                 className="text-white hover:text-white/80 transition-colors"
                 aria-label={link.label}
               >
