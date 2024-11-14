@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader';
 import { motion } from 'framer-motion';
 
 export default function Alumni() {
+  document.title = 'CODE VISION | Alumni';
   const alumni = {
     2024: [
       'Abhishek Jha',
@@ -141,10 +142,13 @@ export default function Alumni() {
       animate={{ opacity: 1, y: 0 }}
       className="card mb-8"
     >
-      <h2 className="text-2xl font-bold mb-6">{year} Passout</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <h2 className="text-2xl font-bold mb-4">{year} Passout</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
         {names.map((name, index) => (
-          <div key={index} className="bg-white/5 rounded-lg p-4 text-center">
+          <div
+            key={index}
+            className="bg-white/5 rounded-lg px-2 py-2 sm:p-4 text-center"
+          >
             {name}
           </div>
         ))}
@@ -156,7 +160,7 @@ export default function Alumni() {
     <div className="pt-20">
       <PageHeader title="Alumni" subtitle="Our distinguished former members" />
 
-      <div className="section-container">
+      <div className="container mx-auto px-2 mt-10">
         {Object.entries(alumni).map(([year, names]) => (
           <AlumniSection key={year} year={year} names={names} />
         ))}

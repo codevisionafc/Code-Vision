@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function ContactUs() {
+  document.title = 'CODE VISION | Contact Us';
   const contactInfo = [
     {
       icon: FaEnvelope,
@@ -19,7 +20,8 @@ export default function ContactUs() {
     {
       icon: FaMapMarkerAlt,
       title: 'Address',
-      content: '1st floor, Dept. of CSE, Computer Science and Engineering Block, Bengal College of Engineering and Technology, Durgapur, West Bengal - 713212',
+      content:
+        '1st floor, Dept. of CSE, Computer Science and Engineering Block, Bengal College of Engineering and Technology, Durgapur, West Bengal - 713212',
       link: '#',
     },
   ];
@@ -28,7 +30,7 @@ export default function ContactUs() {
     <div className="pt-20">
       <PageHeader title="Contact Us" subtitle="Get in touch with us" />
 
-      <div className="section-container">
+      <div className="container mx-auto px-2 mt-10">
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
