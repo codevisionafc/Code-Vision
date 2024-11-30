@@ -41,18 +41,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Title Section */}
-          <div className="flex items-center flex-shrink-0">
-            <Link to={'/'}>
-              <img
-                src={logo}
-                alt="CODE VISION Logo"
-                className="h-10 sm:h-12 w-auto rounded-lg"
-              />
-            </Link>
+          <Link className="flex items-center flex-shrink-0" to="/">
+            <img
+              src={logo}
+              alt="CODE VISION Logo"
+              className="h-10  w-auto rounded-lg"
+            />
             <img
               src={longLogo}
               alt="CODE VISION Logo"
-              className="h-8 sm:h-10 w-auto px-1.5"
+              className="h-8 w-auto px-1.5"
             />
             {/* <div className="ml-3">
               <h1 className="text-lg sm:text-xl font-bold whitespace-nowrap">
@@ -62,7 +60,7 @@ export default function Navbar() {
                 An adobe for coders
               </p>
             </div> */}
-          </div>
+          </Link>
 
           {/* Desktop and Tablet Navigation */}
           <div className="hidden lg:flex space-x-6 xl:space-x-8">
