@@ -15,11 +15,31 @@ import longLogo from '../assets/logo code vision.png';
 
 export default function Footer() {
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'Github' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: FaFacebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: FaYoutube, href: 'https://youtube.com', label: 'YouTube' },
+    {
+      icon: FaGithub,
+      href: 'https://github.com/codevisionafc',
+      label: 'GitHub',
+    },
+    {
+      icon: FaLinkedin,
+      href: 'https://linkedin.com/company/codevision-bcet',
+      label: 'LinkedIn',
+    },
+    {
+      icon: FaInstagram,
+      href: 'https://www.instagram.com/codevisionbcet/',
+      label: 'Instagram',
+    },
+    {
+      icon: FaFacebook,
+      href: 'https://www.facebook.com/Cv.bcet/',
+      label: 'Facebook',
+    },
+    {
+      icon: FaYoutube,
+      href: 'https://www.youtube.com/channel/UChKbL22CrdIA0bTpYOip6nA',
+      label: 'YouTube',
+    },
     {
       icon: FaEnvelope,
       mail: 'codevisionafc@gmail.com',
@@ -155,7 +175,7 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center">
             © 2024{' '}
-            <a href="https://flowbite.com" className="hover:underline">
+            <a href="/" className="hover:underline">
               Code Vision
             </a>
             . All Rights Reserved.
