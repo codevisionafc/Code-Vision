@@ -6,8 +6,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
+/* body {
   @apply bg-gradient-to-r from-primary-purple to-primary-blue min-h-screen text-white;
+} */
+
+body {
+  color: white;
 }
 
 .nav-link {

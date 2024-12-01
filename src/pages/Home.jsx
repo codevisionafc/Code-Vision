@@ -124,7 +124,7 @@ export default function Home() {
               width="100%"
               height="100%"
               className="rounded-lg"
-              src={`https://www.youtube.com/embed/${orientationVideoId}?autoplay=1&mute=1&vq=small`}
+              src={`https://www.youtube.com/embed/${orientationVideoId}?autoplay=1&mute=1&vq=small&loop=1&playlist=${orientationVideoId}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

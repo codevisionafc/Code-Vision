@@ -15,6 +15,7 @@ import Alumni from './pages/Alumni';
 import Gallery from './pages/Gallery';
 import ContactUs from './pages/ContactUs';
 import './assets/customScrollbar.css';
+import AnimatedBackground from './components/AnimatedBackground';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -30,6 +31,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <Router>
+      <AnimatedBackground />
       <ScrollToTop />
       <div className="min-h-screen font-poppins">
         <Navbar />
