@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 const ParticleField = () => {
   const particles = Array.from({ length: 30 });
-  
+
   return (
     <div className="absolute inset-0 overflow-hidden">
       {particles.map((_, index) => {
         const size = Math.random() * 4 + 2;
         const initialX = Math.random() * 100;
         const initialY = Math.random() * 100;
-        
+
         return (
           <motion.div
             key={index}
@@ -31,7 +31,7 @@ const ParticleField = () => {
             transition={{
               duration: 5 + Math.random() * 5,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: 'easeInOut',
               delay: Math.random() * 2,
             }}
           />
