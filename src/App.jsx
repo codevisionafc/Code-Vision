@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   useLocation,
@@ -30,6 +30,8 @@ function ScrollToTop() {
 
 const homepage = packageInfo.homepage || '/';
 const base = new URL(homepage).pathname;
+
+// const base = '/';
 
 export default function App() {
   return (

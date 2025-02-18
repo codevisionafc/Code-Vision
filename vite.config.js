@@ -6,6 +6,8 @@ import packageInfo from './package.json';
 const homepage = packageInfo.homepage || '/';
 const base = new URL(homepage).pathname;
 
+// const base = '/';
+
 export default defineConfig({
   plugins: [react()],
   server: {
