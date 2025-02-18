@@ -16,7 +16,7 @@ import Gallery from './pages/Gallery';
 import ContactUs from './pages/ContactUs';
 import './assets/customScrollbar.css';
 import AnimatedBackground from './components/AnimatedBackground';
-import packageInfo from '../package.json';
+
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,14 +28,9 @@ function ScrollToTop() {
   return null;
 }
 
-const homepage = packageInfo.homepage || '/';
-const base = new URL(homepage).pathname;
-
-// const base = '/';
-
 export default function App() {
   return (
-    <Router basename={base}>
+    <Router>
       <AnimatedBackground />
       <ScrollToTop />
       <div className="min-h-screen font-poppins">

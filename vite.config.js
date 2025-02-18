@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react';
 import packageInfo from './package.json';
 
 const homepage = packageInfo.homepage || '/';
+console.log(homepage);
 const base = new URL(homepage).pathname;
-
+console.log(base);
 // const base = '/';
 
 export default defineConfig({
